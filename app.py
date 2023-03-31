@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request, url_for
 import pickle
 import numpy as np
 from pymongo import MongoClient
@@ -28,9 +28,13 @@ def predict(values, dic):
 
     
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    if request.method == 'POST':
+        patient_id = request.form.get('patient_id')
+        return redirect(url_for('kidneyPage', patient=patient_id))
+    else:
+        return render_template('home.html')
 
 
 

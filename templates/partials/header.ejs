@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <!-- google-fonts -->
+    
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="/css/style-starter.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+</head>
+
+<body>
+   
+    <nav id="navbar">
+        <div class="nav-wrapper">
+          <!-- Navbar Logo -->
+          <div class="logo">
+            <a href="index"><i class=""></i><img src="images/Logo-white.png" width="200px"></a>
+          </div>
+      
+          <!-- Navbar Links -->
+          <ul id="menu">
+            <li><a href="index">Home</a></li><!--
+         --><li><a href="services">Services</a></li><!--
+         --><li><a href="diagnostic-depart">Diagnostic</a></li><!--
+         --><li><a href="register">Register</a></li><!--
+         --><li><a href="signin">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      
+      <!-- Menu Icon -->
+      <div class="menuIcon">
+        <span class="icon icon-bars"></span>
+        <span class="icon icon-bars overlay"></span>
+      </div>
+      
+      <div class="overlay-menu">
+        <ul id="menu">
+            <li><a href="index">Home</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="diagnostic">Diagnostic</a></li>
+            <li><a href="register">Register</a></li>
+            <li><a href="signin">Login</a></li>
+          </ul>
+      </div>
+
+</body>
+
+<script>
+var lastScrollTop;
+navbar = document.getElementById('navbar');
+window.addEventListener('scroll',function(){
+var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+if(scrollTop > lastScrollTop){
+navbar.style.top='-80px';
+}
+else{
+navbar.style.top='0';
+}
+lastScrollTop = scrollTop;
+});
+  </script>
+<script>
+     let menuIcon = document.querySelector('.menuIcon');
+        let nav = document.querySelector('.overlay-menu');
+
+        menuIcon.addEventListener('click', () => {
+            if (nav.style.transform != 'translateX(0%)') {
+                nav.style.transform = 'translateX(0%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            } else { 
+                nav.style.transform = 'translateX(-100%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            }
+        });
+
+
+        // Toggle Menu Icon ========================================
+        let toggleIcon = document.querySelector('.menuIcon');
+
+        toggleIcon.addEventListener('click', () => {
+            if (toggleIcon.className != 'menuIcon toggle') {
+                toggleIcon.className += ' toggle';
+            } else {
+                toggleIcon.className = 'menuIcon';
+            }
+        });
+
+  
+</script>
+
+
+
+</html>
