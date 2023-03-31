@@ -37,16 +37,15 @@ def kidneyPage():
 
 @app.route("/predict", methods=['POST'])
 def predictPage():
-    try:
+    
         to_predict_list = list(map(float, request.form.values()))
         pred = predict(to_predict_list, {})
         print('to_predict_list:', to_predict_list)
         print('pred:', pred)
-    except:
-        message = "Please enter valid data"
-        return render_template("home.html", message=message)
+    
+        
 
-    return render_template('predict.html', pred=pred)
+        return render_template('predict.html', pred=pred)
 
 
 
