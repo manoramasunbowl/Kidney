@@ -35,6 +35,7 @@ def predictPage():
     try:
         if request.method == 'POST':
             to_predict_dict = request.form.to_dict()
+            print('to_predict_dict:', to_predict_dict)  # added print statement
 
             for key, value in to_predict_dict.items():
                 try:
@@ -44,6 +45,8 @@ def predictPage():
 
             to_predict_list = list(map(float, list(to_predict_dict.values())))
             pred = predict(to_predict_list, to_predict_dict)
+            print('to_predict_list:', to_predict_list)  # added print statement
+
     except:
         message = "Please enter valid data"
         return render_template("home.html", message=message)
