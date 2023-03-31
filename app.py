@@ -14,7 +14,12 @@ def predict(values, dic):
     if len(values) == 24:
         model = pickle.load(open('models/kidney.pkl','rb'))
         values = np.asarray(values)
-        return model.predict(values.reshape(1, -1))[0]
+        print('values shape:', values.shape)
+        print('values:', values)
+        pred = model.predict(values.reshape(1, -1))[0]
+        print('pred:', pred)
+        return pred
+
 
     
 
@@ -30,23 +35,13 @@ def kidneyPage():
 
 
 
-@app.route("/predict", methods = ['POST', 'GET'])
+@app.route("/predict", methods=['POST'])
 def predictPage():
     try:
-        if request.method == 'POST':
-            to_predict_dict = request.form.to_dict()
-            print('to_predict_dict:', to_predict_dict)  # added print statement
-
-            for key, value in to_predict_dict.items():
-                try:
-                    to_predict_dict[key] = int(value)
-                except ValueError:
-                    to_predict_dict[key] = float(value)
-
-            to_predict_list = list(map(float, list(to_predict_dict.values())))
-            pred = predict(to_predict_list, to_predict_dict)
-            print('to_predict_list:', to_predict_list)  # added print statement
-
+        to_predict_list = list(map(float, request.form.values()))
+        pred = predict(to_predict_list, {})
+        print('to_predict_list:', to_predict_list)
+        print('pred:', pred)
     except:
         message = "Please enter valid data"
         return render_template("home.html", message=message)
