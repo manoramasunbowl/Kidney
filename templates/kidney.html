@@ -19,136 +19,136 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="age" placeholder="Age (in years)">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="age" placeholder="Age (in years)"  value="{{ document.age }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="blood_pressure" placeholder="Blood Pressure (in mm/Hg)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="blood_pressure" placeholder="Blood Pressure (in mm/Hg)" value="{{ document.blood_pressure }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="specific_gravity" placeholder="Specific Gravity">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="albumin" placeholder="Albumin (0, 1, 2, 3, 4, 5)">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="sugar" placeholder="Sugar (0, 1, 2, 3, 4, 5)">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="red_blood_cells" placeholder="Red Blood Cells (0: Abnormal; 1: Normal)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="specific_gravity" placeholder="Specific Gravity" value="{{ document.specific_gravity }}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="pus_cell" placeholder="Pus Cell (0: Abnormal; 1: Normal)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="albumin" placeholder="Albumin (0, 1, 2, 3, 4, 5)" value="{{ document.albumin }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="pus_cell_clumps" placeholder="Pus Cell Clumps (0: Not Present; 1: Present)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="sugar" placeholder="Sugar (0, 1, 2, 3, 4, 5)" value="{{ document.sugar }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="bacteria" placeholder="Bacteria (0: Not Present; 1: Present)">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="blood_glucose_random" placeholder="Blood Glucose Random (in mgs/dl)">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="blood_urea" placeholder="Blood Urea (in mgs/dl)">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="serum_creatinine" placeholder="Serum Creatinine (in mgs/dl)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="red_blood_cells" placeholder="Red Blood Cells (0: Abnormal; 1: Normal)" value="{{ document.red_blood_cells }}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="sodium" placeholder="Sodium (in mEq/L)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="pus_cell" placeholder="Pus Cell (0: Abnormal; 1: Normal)" value="{{ document.pus_cell }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="potassium" placeholder="Potassium (in mEq/L)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="pus_cell_clumps" placeholder="Pus Cell Clumps (0: Not Present; 1: Present)" value="{{ document.pus_cell_clumps }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="haemoglobin" placeholder="Haemoglobin (in gms)">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="packed_cell_volume" placeholder="Packed Cell Volume">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="white_blood_cell_count" placeholder="White Blood Cell Count (in cells/cumm)">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="red_blood_cell_count" placeholder="Red Blood Cell Count (in millions/cmm)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="bacteria" placeholder="Bacteria (0: Not Present; 1: Present)" value="{{ document.bacteria }}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="hypertension" placeholder="Hypertension (0: No; 1: Yes)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="blood_glucose_random" placeholder="Blood Glucose Random (in mgs/dl)" value="{{ document.blood_glucose_random }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="diabetes_mellitus" placeholder="Diabetes Mellitus (0: No; 1: Yes)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="blood_urea" placeholder="Blood Urea (in mgs/dl)" value="{{ document.blood_urea }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="coronary_artery_disease" placeholder="Coronary Artery Disease (0: No; 1: Yes)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="serum_creatinine" placeholder="Serum Creatinine (in mgs/dl)" value="{{ document.serum_creatinine }}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="appetite" placeholder="Appetite (0: Good; 1: Poor)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="sodium" placeholder="Sodium (in mEq/L)" value="{{ document.sodium }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="peda_edema" placeholder="Pedal Edema (0: No; 1: Yes)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="potassium" placeholder="Potassium (in mEq/L)" value="{{ document.potassium }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; " class="form-control" type="text" name="aanemia" placeholder="Anemia (0: No; 1: Yes)">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="haemoglobin" placeholder="Haemoglobin (in gms)" value="{{ document.haemoglobin }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="packed_cell_volume" placeholder="Packed Cell Volume" value="{{ document.packed_cell_volume }}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="white_blood_cell_count" placeholder="White Blood Cell Count (in cells/cumm)" value="{{ document.white_blood_cell_count }}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="red_blood_cell_count" placeholder="Red Blood Cell Count (in millions/cmm)" value="{{ document.red_blood_cell_count }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="hypertension" placeholder="Hypertension (0: No; 1: Yes)" value="{{ document.hypertension }}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="diabetes_mellitus" placeholder="Diabetes Mellitus (0: No; 1: Yes)" value="{{ document.diabetes_mellitus }}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="coronary_artery_disease" placeholder="Coronary Artery Disease (0: No; 1: Yes)" value="{{ document.coronary_artery_disease }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="appetite" placeholder="Appetite (0: Good; 1: Poor)" value="{{ document.appetite }}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="peda_edema" placeholder="Pedal Edema (0: No; 1: Yes)" value="{{ document.peda_edema }}">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; " class="form-control" type="text" name="aanemia" placeholder="Anemia (0: No; 1: Yes)" value="{{ document.aanemia }}">
                         </div>
                     </div>
                 </div>

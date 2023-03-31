@@ -2,6 +2,11 @@ import os
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+from pymongo import MongoClient
+import pymongo
+client = pymongo.MongoClient("mongodb+srv://manorama:manorama@cluster0.sntkvlc.mongodb.net/?retryWrites=true&w=majority")
+db = client["Kidney_Patients"]
+collection = db["Kidney_result"]
 
 
 
@@ -29,10 +34,13 @@ def home():
 
 
 
-@app.route("/kidney", methods=['GET', 'POST'])
-def kidneyPage():
-    return render_template('kidney.html')
-
+@app.route("/kidney/<string:patient>", methods=['GET','POST'])
+def kidneyPage(patient):
+    document = collection.find_one({'patient': patient})
+    if document:
+        return render_template('kidney.html', document=document)
+    else:
+        return "Document not found."
 
 
 @app.route("/predict", methods=['POST'])
