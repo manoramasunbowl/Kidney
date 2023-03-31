@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="og:title" content="Medibuddy: Smart Disease Predictor">
-  <meta name="author" content="KANCHI TANK">
+  
   <meta name="og:image" content="static/favicon.ico">
   <title>Medibuddy</title>
   <link rel="icon" type="image/x-icon" href="static/favicon.ico?v=2"  />
@@ -40,8 +40,8 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="background-image: linear-gradient(#4e0374, #4e0374) !important;">
-        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'logo.png') }} " height="70px" width="180px"></a>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark"  >
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
          </button>
@@ -50,27 +50,11 @@
              <li class="nav-item active">
                <a href="{{ url_for('home') }}" class="nav-link">Home</a>
              </li>
-             <li class="nav-item active">
-               <a class="nav-link" href="{{ url_for('diabetesPage') }}">Diabetes</a>
-             </li>
-             <li class="nav-item active">
-               <a class="nav-link" href="{{ url_for('cancerPage') }}">Breast Cancer</a>
-             </li>
-             <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('heartPage') }}">Heart</a>
-             </li>
+             
              <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('kidneyPage') }}">Kidney</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('liverPage') }}">Liver</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('malariaPage') }}">Malaria</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('pneumoniaPage') }}">Pneumonia</a>
-              </li>
+             
            </ul>
          </div>
        </nav>
@@ -85,12 +69,6 @@
 	{% endblock %}
     </div>
   </main>
-  <footer style="background-image: linear-gradient(#4e0374, #4e0374) !important;">
-    <center>
-      <ul style="list-style-type:none;">
-      <li><p style="color: white;">Made with <span style="color: red;">&hearts;</span> by Kanchi, Trupti, and Saloni </p></li>
-    </ul>
-  </center>
-  </footer>
+  
 </body>
 </html>
