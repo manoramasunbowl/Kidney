@@ -13,22 +13,25 @@ body {
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <center><h1 style="color:blanchedalmond;">Kidney Disease Predictor</h1></center>
+        <center><h1 style="color:black;">Kidney Disease Predictor</h1></center>
         <div class="card card-body" style="border: 1px solid black; ">
             <form class="form-horizontal" action="{{ url_for('predictPage',patient_id=document[1]) }}" method="POST">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black;" class="form-control" type="text" name="age"label="Age (in years)" placeholder="Age (in years)"  value="{{ document[2] }}">
+                            <label > Age (in years)</label>
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="age" placeholder="Age (in years)"  value="{{ document[2] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Blood Pressure (in mm/Hg)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="blood_pressure" label="Blood Pressure (in mm/Hg)" placeholder="Blood Pressure (in mm/Hg)" value="{{ document[3] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Specific Gravity</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="specific_gravity"label="Specific Gravity" placeholder="Specific Gravity" value="{{ document[4] }}">
                         </div>
                     </div>
@@ -36,16 +39,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Albumin (0, 1, 2, 3, 4, 5)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="albumin" label="Albumin (0, 1, 2, 3, 4, 5)" placeholder="Albumin (0, 1, 2, 3, 4, 5)" value="{{ document[5] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Sugar (0, 1, 2, 3, 4, 5)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="sugar" label="Sugar (0, 1, 2, 3, 4, 5)" placeholder="Sugar (0, 1, 2, 3, 4, 5)" value="{{ document[6]}}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Red Blood Cells (0: Abnormal; 1: Normal)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="red_blood_cells" label="Red Blood Cells (0: Abnormal; 1: Normal)" placeholder="Red Blood Cells (0: Abnormal; 1: Normal)" value="{{ document[7] }}">
                         </div>
                     </div>
@@ -53,16 +59,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Pus Cell (0: Abnormal; 1: Normal)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="pus_cell"  label="Pus Cell (0: Abnormal; 1: Normal)"placeholder="Pus Cell (0: Abnormal; 1: Normal)" value="{{ document[8] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Pus Cell Clumps (0: Not Present; 1: Present)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="pus_cell_clumps"  label="Pus Cell Clumps (0: Not Present; 1: Present)"placeholder="Pus Cell Clumps (0: Not Present; 1: Present)" value="{{ document[9] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Bacteria (0: Not Present; 1: Present)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="bacteria"  label="Bacteria (0: Not Present; 1: Present)"placeholder="Bacteria (0: Not Present; 1: Present)" value="{{ document[10] }}">
                         </div>
                     </div>
@@ -70,16 +79,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Blood Glucose Random (in mgs/dl)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="blood_glucose_random" label="Blood Glucose Random (in mgs/dl)" placeholder="Blood Glucose Random (in mgs/dl)" value="{{ document[11] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Blood Urea (in mgs/dl)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="blood_urea" label="Blood Urea (in mgs/dl)" placeholder="Blood Urea (in mgs/dl)" value="{{ document[12] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Serum Creatinine (in mgs/dl)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="serum_creatinine" label="Serum Creatinine (in mgs/dl)" placeholder="Serum Creatinine (in mgs/dl)" value="{{ document[13] }}">
                         </div>
                     </div>
@@ -87,16 +99,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Sodium (in mEq/L)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="sodium" label="Sodium (in mEq/L)" placeholder="Sodium (in mEq/L)" value="{{ document[14] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Potassium (in mEq/L)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="potassium"  label="Potassium (in mEq/L)" placeholder="Potassium (in mEq/L)" value="{{ document[15] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Haemoglobin (in gms)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="haemoglobin"  label="Haemoglobin (in gms)"placeholder="Haemoglobin (in gms)" value="{{ document[16] }}">
                         </div>
                     </div>
@@ -104,16 +119,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Packed Cell Volume</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="packed_cell_volume" label="Packed Cell Volume" placeholder="Packed Cell Volume" value="{{ document[17] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > White Blood Cell Count (in cells/cumm)</label>
                             <input style="border: 1px solid black;" class="form-control" type="text" name="white_blood_cell_count"  label="White Blood Cell Count (in cells/cumm)"placeholder="White Blood Cell Count (in cells/cumm)" value="{{ document[18] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Red Blood Cell Count (in millions/cmm)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="red_blood_cell_count" label="Red Blood Cell Count (in millions/cmm)" placeholder="Red Blood Cell Count (in millions/cmm)" value="{{ document[19] }}">
                         </div>
                     </div>
@@ -121,16 +139,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Hypertension (0: No; 1: Yes)</label>
                             <input style="border: 1px solid black;" class="form-control" type="text" name="hypertension" label="Hypertension (0: No; 1: Yes)" placeholder="Hypertension (0: No; 1: Yes)" value="{{ document[20] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Diabetes Mellitus (0: No; 1: Yes)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="diabetes_mellitus"  label="Diabetes Mellitus (0: No; 1: Yes)"placeholder="Diabetes Mellitus (0: No; 1: Yes)" value="{{ document[21] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Coronary Artery Disease (0: No; 1: Yes)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="coronary_artery_disease"  label="Coronary Artery Disease (0: No; 1: Yes)"placeholder="Coronary Artery Disease (0: No; 1: Yes)" value="{{ document[22] }}">
                         </div>
                     </div>
@@ -138,16 +159,19 @@ body {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Appetite (0: Good; 1: Poor)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="appetite" label="Appetite (0: Good; 1: Poor)"placeholder="Appetite (0: Good; 1: Poor)" value="{{ document[23] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Pedal Edema (0: No; 1: Yes)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="peda_edema"  label="Pedal Edema (0: No; 1: Yes)"placeholder="Pedal Edema (0: No; 1: Yes)" value="{{ document[24] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
+                            <label > Anemia (0: No; 1: Yes)</label>
                             <input style="border: 1px solid black; " class="form-control" type="text" name="aanemia"  label="Anemia (0: No; 1: Yes)"placeholder="Anemia (0: No; 1: Yes)" value="{{ document[25] }}">
                         </div>
                     </div>
