@@ -13,6 +13,7 @@ conn = mysql.connector.connect(
 )
 
 app = Flask(__name__)
+#app.use_static_folder('static')
 
 def predict(values, dic):
     # diabetes
@@ -77,5 +78,5 @@ def predictPage(patient_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port='3000')
     conn.close()
